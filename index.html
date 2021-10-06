@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tigra Nova Garra</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="login-container" class="pre-auth">This application requires access to your YouTube account.
+            Please <a href="#" id="login-link">authorize</a> to continue.
+        </div>
+        <div id="buttons" class="row">
+            <button data-index="0" class="btn btn-primary search-button mt-2" disabled onclick="searchMultipleVideos(this)">Refresh</button>
+            <!-- <label>
+                <input id="query-1" value='kl80HjBFEAs' type="text"/>
+                <button data-query="query-1" data-result="search-container-1" class="search-button" disabled onclick="search(this)">Search</button>
+            </label>
+
+            <label>
+                <input id="query-2" value='eh8PKfbHvug' type="text"/>
+                <button data-query="query-2" data-result="search-container-2" class="search-button" disabled onclick="search(this)">Search</button>
+            </label> -->
+        </div>
+        <h1><b>Prémios Tigra</b></h1>
+        <div id="containers" class="row m-0">
+            <!-- <div id="search-container-1"></div>
+            <div id="search-container-2"></div> -->
+        </div>    
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+      <script src="assets/auth.js"></script>
+      <script src="assets/search.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+    <script>
+        var videos = [
+            'bhtAxqt1VDA',
+            'eh8PKfbHvug',
+            'kl80HjBFEAs',
+            'ez7_n8-Xu1k',
+        ];
+
+        function docReady(fn) {
+            // see if DOM is already available
+            if (document.readyState === "complete" || document.readyState === "interactive") {
+                // call on next available tick
+                setTimeout(fn, 1);
+            } else {
+                document.addEventListener("DOMContentLoaded", fn);
+            }
+        }    
+
+        docReady(function() {
+            console.log("here")
+        });
+
+        // const buttons = videos.map((video, index) => {
+        //     return `<div class="col-md-2 form-group ml-2">
+        //         <div class="col-auto">
+        //         <label>ID Video</label>
+        //             <input id="query-${index}" value='${video}' type="text" class="form-control"/>
+        //         </div>
+        //         <div class="col-auto">
+        //             <button data-index="${index}" class="btn btn-primary search-button mt-2" disabled onclick="search(this)">Search</button>
+        //         </div>
+        //     </div>`;
+        // });
+
+        // const containers = videos.map((video, index) => {
+        //     return `<div id="search-container-${index}" class="card flex col-md-3 mt-4 nm-1 p-0">
+        //             <img class="card-img-top"src="" width="200"/>
+        //             <div class="card-body">
+        //                 <i class="fa fa-thumbs-up like"></i>
+        //                 <i class="fa fa-eye view"></i>
+        //                 <i class="fa fa-comments comment"></i>
+        //             </div>
+        //         </div>`;
+        // });
+
+        // $('#buttons').html(buttons);
+        // $('#containers').html(containers);
+    </script>
+</body>
+</html>
