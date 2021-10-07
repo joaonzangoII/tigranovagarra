@@ -51,7 +51,6 @@ function searchMultipleVideos() {
 
 function sort(items) {
     return items.sort(function(a, b) {return a.statistics.likeCount - b.statistics.likeCount;});
-    return items.sort(function(a, b) {return a - b;});
 }
 
 document.addEventListener('responseReceived', function (e) { 
